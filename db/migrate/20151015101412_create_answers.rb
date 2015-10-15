@@ -1,6 +1,6 @@
-class CreateFormPosts < ActiveRecord::Migration
+class CreateAnswers < ActiveRecord::Migration
   def change
-    create_table :form_posts do |t|
+    create_table :answers do |t|
       t.string :name
       t.integer :age
       t.string :grade

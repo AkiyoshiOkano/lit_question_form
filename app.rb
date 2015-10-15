@@ -8,8 +8,8 @@ get '/' do
     erb :index
 end
 
-post '/formpost' do
-    FormPost.create(
+post '/answers' do
+    Answer.create(
         name: params[:name],
         age: params[:age],
         gender: params[:gender],
@@ -23,7 +23,7 @@ post '/formpost' do
     redirect '/'
 end
 
-get '/result' do
-    @result = FormPost.all
-    erb :result
+get '/answers' do
+    @answers = Answer.all
+    erb :answers
 end
